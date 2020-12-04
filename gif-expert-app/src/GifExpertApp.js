@@ -1,16 +1,13 @@
 // rafc
 import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 const GifExpertApp =()=>{
     
     
-    const [categories, setCategories] = useState(["one pucnh", "samurai", "drangon ball"]);
+    const [categories, setCategories] = useState(["one pucnh"]);
 
-    // const handleAdd=(value)=>{
-    //     setCategories([...categories,value]);
-    //     // setCategories(cats => [...cats,value]);
-    // }
     return  <>
         <h2>GifExpertApp</h2>
         <AddCategory setCategories={setCategories} />
@@ -18,9 +15,11 @@ const GifExpertApp =()=>{
        
         <ol>
             {
-                categories.map((category, i)=>{
-                    return <li key={category}>{category} </li>
-                })
+                categories.map(category=>(
+                    <GifGrid 
+                    key={category}
+                    category={category}/>
+                ))
             }
         </ol>
     </>
