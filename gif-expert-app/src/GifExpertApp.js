@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 
-// const categories=["one pucnh", "samurai", "drangon ball"];
-
 const GifExpertApp =()=>{
     
     
@@ -15,7 +13,7 @@ const GifExpertApp =()=>{
     // }
     return  <>
         <h2>GifExpertApp</h2>
-        <AddCategory />
+        <AddCategory setCategories={setCategories} />
         <hr/>
        
         <ol>
