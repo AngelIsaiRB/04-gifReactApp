@@ -30,7 +30,23 @@ describe('pruebas en AddCategory', () => {
         });
         expect(setCategories).not.toHaveBeenCalled();
         
-    })
+    });
+
+    test('should de llmar el set categories y limpiar la caja de texto', () => {
+        const input = wrapper.find("input");
+        const value= "simulado";
+        input.simulate("change",{target:{value:value}});        
+        wrapper.find("form").simulate("submit",{
+            preventDefault(){}
+        });
+        expect(setCategories).toHaveBeenCalled();
+        // comprovar si se llama una funcion en vez de solo valores
+        expect(setCategories).toHaveBeenCalledWith(expect.any(Function));
+        const clearInput= wrapper.find("input");
+        expect(clearInput.prop("value")).toBe("");
+
+    });
+    
     
     
 });
