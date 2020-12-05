@@ -4,8 +4,12 @@ exports[`test en el componete de gidGridItem should de mostrtar el componente co
 <div
   className="card animate__animated animate__fadeIn "
 >
-  <img />
+  <img
+    alt="un titulo"
+    src="https://unaimagen.jps"
+  />
   <p>
+    un titulo
      
   </p>
 </div>
