@@ -17,3 +17,23 @@ exports[`pruebas dentro de gifGrid should de hacr match con el snapshot 1`] = `
   />
 </Fragment>
 `;
+
+exports[`pruebas dentro de gifGrid should debe de mostrar items cuando carga imagenes useFetchsGisf 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    hola world
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="ABC"
+      key="ABC"
+      title="xx nada xx"
+      url="Https://localhostfnsofbsofudnf"
+    />
+  </div>
+</Fragment>
+`;

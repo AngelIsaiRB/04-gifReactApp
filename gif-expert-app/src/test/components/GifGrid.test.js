@@ -25,11 +25,13 @@ describe("pruebas dentro de gifGrid",  ()=>{
             title: "xx nada xx"
         }]
         useFetchGifs.mockReturnValue({
-            data    : [],
-            loading :true,
+            data    : gifs,
+            loading :false,
         });
         const wrapper = shallow(<GifGrid   category={category}/>);
         
+        expect(wrapper).toMatchSnapshot();
+
     });
     
     
